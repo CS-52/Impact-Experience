@@ -1,0 +1,22 @@
+.contactImage {
+   height: 50px;
+   width: 50px
+}
+
+.Contact {
+  height: 75px;
+  margin: 7px;
+  border: 1px black;
+  box-shadow: 1px 1px #7f8288;
+}
+
+.contactText {
+  font-size: 4px;
+  flex-grow: 1;
+}
+
+
+.FlexRow {
+  display: flex;
+  flex-direction: row;
+}
