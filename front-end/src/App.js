@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import NavigationBar from './component/navigation.component.js';
+import Contact from './component/contact.component.js';
+import Blog from './component/blog.component.js';
+import NavigationBar from './component/navigation.component.js'
+
 import './App.css';
 import './Assets/RivoliconsWebFont/style.css';
 import { Switch, Route} from 'react-router-dom';

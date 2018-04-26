@@ -15,7 +15,6 @@
   flex-grow: 1;
 }
 
-
 .FlexRow {
   display: flex;
   flex-direction: row;
