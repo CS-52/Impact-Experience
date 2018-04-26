@@ -1,17 +1,17 @@
 .contactImage {
-   height: 50px;
-   width: 50px
+   height: 150px;
+   width: 150px
 }
 
 .Contact {
-  height: 75px;
-  margin: 7px;
+  height: 200px;
+  margin: 15px;
   border: 1px black;
   box-shadow: 1px 1px #7f8288;
 }
 
 .contactText {
-  font-size: 4px;
+  font-size: 13px;
   flex-grow: 1;
 }
 

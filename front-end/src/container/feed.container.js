@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import './feed.css';
 
 class Feed extends Component {
   constructor(prop){
@@ -8,8 +8,11 @@ class Feed extends Component {
 
   render() {
     return (
-      <div>
-      </div>
+      <div className= "flexCol">
+       <div className="feedBar flexRow justifyRow">
+        <input className="addQbtn" type="submit" value="Add Question" />
+       </div>
+     </div>
     );
   }
 }

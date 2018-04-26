@@ -11,14 +11,28 @@ class NavigationBar extends Component {
           };
   }
 
+  selected(event){
+    document.getElementById('feedNav').classList.toggle("selected");
+    document.getElementById('searchNav').classList.toggle("selected");
+  }
+
+
   render() {
     return (
       <div className="navigationBar flexCol">
           <img src={this.state.dp} className="dpImage" alt="display picture" />
           <div className="navFont">{this.state.fname}</div>
           <div className="navButtons flexCol">
-              <Link to='/'><div className="flexRow  justifyRow navFont navButtonFont"><span class="ri ri-chevron-right-circle iconpadding"></span> Feed</div></Link>
-              <Link to='/search'><div className="flexRow justifyRow navFont navButtonFont selected"><span class="ri ri-search iconpadding"></span>Search</div></Link>
+              <Link className="routingLink" to='/'>
+                  <div id="feedNav" onClick={this.selected} className="flexRow  justifyRow navFont navButtonFont selected">
+                      <span className="ri ri-chevron-right-circle iconpadding"></span>Feed
+                  </div>
+              </Link>
+              <Link className="routingLink"  to='/search'>
+                  <div id="searchNav" onClick={this.selected} className="flexRow justifyRow navFont navButtonFont">
+                         <span className="ri ri-search iconpadding"></span>Search
+                  </div>
+              </Link>
           </div>
    </div>
     );

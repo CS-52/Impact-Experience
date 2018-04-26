@@ -1,18 +1,18 @@
 .dpImage{
   width: 6vw;
   border-radius: 50%;
-  padding-bottom: 3px;
+  padding-bottom: 7px;
 }
 
 .navFont{
   color: white;
-  font-size: 4px;
+  font-size: 14px;
   font-family: Montserrat;
 }
 
 .navButtonFont{
   width: 100%;
-  margin-bottom: 2px;
+  margin-bottom: 5px;
 }
 
 
@@ -22,12 +22,13 @@
   height: 100%;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 10px;
+  padding-top: 20px;
 }
 
 .navButtons{
   justify-content: center;
   height: 20vh;
+  box-sizing: border-box;
   width: 100%;
 }
 
@@ -37,4 +38,13 @@
 
 .iconpadding {
   padding-right: 2px;
+}
+
+
+.routingLink:focus{
+  text-decoration:none;
+}
+
+.routingLink:active{
+  text-decoration:none;
 }

@@ -7,17 +7,23 @@
 }
 
 .taskinput {
-  background-color: #f5f5f5;
-  border: 0;
-  border-radius: 2px;
-  font-size: 4px;
-  flex-grow: 1;
+  background-color: white;
+  padding: 4px;
+  border: 1px black solid;
+  font-size: 12px;
+  width: 20vw;
   box-sizing: border-box;
 }
 
 .searchbtn{
-  height: 4vh;
-  font-size: 4px;
+  height: 3.7vh;
+  font-size: 15px;
+  background-color: #FF4747;
+  color: white;
+  font-family: Ledger;
+  box-sizing: border-box;
+  width: 18vw;
+  margin-left: 25px;
 }
 
 .searchbtn:focus {
@@ -28,4 +34,11 @@
 .taskinput:focus {
   outline: none;
   /* background-color: #E64A19 !important; */
+}
+
+.search{
+ height: 8vh;
+ background-color: #FCF9F9;
+ box-shadow: 0.5px 5px 5px #e8e8e8;
+ z-index: 2;
 }
