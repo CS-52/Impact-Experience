@@ -1,0 +1,31 @@
+.contactList {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+   overflow:scroll;
+   width: 90vw;
+}
+
+.taskinput {
+  background-color: #f5f5f5;
+  border: 0;
+  border-radius: 2px;
+  font-size: 4px;
+  flex-grow: 1;
+  box-sizing: border-box;
+}
+
+.searchbtn{
+  height: 4vh;
+  font-size: 4px;
+}
+
+.searchbtn:focus {
+  outline: none;
+  /* background-color: #FF6F00 !important; */
+}
+
+.taskinput:focus {
+  outline: none;
+  /* background-color: #E64A19 !important; */
+}

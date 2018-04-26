@@ -14,10 +14,10 @@ class Contact extends Component {
     return (
       <div className="Contact">
           <img src={this.state.image} className="contactImage" alt="contact_image" />
-          <div className="contactText">
+          <div className="contactText flexRow justifyRow">
            {this.state.name}
          </div>
-         <div className="contactText">
+         <div className="contactText flexRow justifyRow">
          {this.state.email}
         </div>
    </div>
