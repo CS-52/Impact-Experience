@@ -1,6 +1,6 @@
 .contactImage {
    height: 50px;
-   width: 50px
+   width: 50px;
 }
 
 .Contact {
@@ -14,7 +14,6 @@
   font-size: 4px;
   flex-grow: 1;
 }
-
 
 .FlexRow {
   display: flex;

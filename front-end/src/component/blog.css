@@ -1,0 +1,41 @@
+.Avatar {
+   height: 64px;
+   width: 64px;
+   border-radius: 0.5;
+}
+.UserInfo{
+}
+
+.UserInfo-contact{
+}
+
+.Contact {
+  height: 75px;
+  margin: 7px;
+  border: 1px black;
+  box-shadow: 1px 1px #7f8288;
+}
+
+.Blog-date {
+  font-size: 4px;
+  flex-grow: 1;
+}
+
+
+.Blog-text {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.Blog-details {
+  background-color: #333;
+  border-top: 3px solid #333;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #aaa;
+  background: #f9f9f9;
+  .menu a {
+    color: #aaa;
+  }
+}
