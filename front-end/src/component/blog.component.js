@@ -6,12 +6,11 @@ class Blog extends Component {
     super(props);
     this.state = {
       date: new Date().toLocaleDateString(),
-      text: props.text,
-      name: props.name,
+      name: "Haiwen",
+      description: "Exec@Impact",
       email: props.email,
-      profile: props.profile,
-      ptitle: props.ptitle,
-      pimg: props.pimg,
+      image: "https://media.licdn.com/dms/image/C5103AQHS2GnhC9haBw/profile-displayphoto-shrink_800_800/0?e=1529906400&v=beta&t=FZPFq_L6xZSU_Z1Il9EG4mXmbgts17FPxBhJN1Gg97A",
+      post: "Example post Example post Example post Example post Example post Example post",
       comments: '10',
       tags: '#impact-experience #coalminers #success #projectideas'
     };
@@ -20,29 +19,21 @@ class Blog extends Component {
   render() {
     return (
       <div className="Blog">
-      <h3 className="ptitle">{this.state.ptitle}<small>{this.state.date}</small></h3>
-      <img
-        src={this.state.pimg}
-        alt = 'Image for Blog Post' />
-
-        <div className="UserInfo">
-          <img className="Avatar"
-            src={this.state.image}
-            alt={this.state.name}
-         />
-        <div className="UserInfo-contact">
-          {this.state.name}
-          {this.state.email}
+        <div className="flexRow">
+           <div className="avatarMargin flexRow" >
+            <img className="Avatar"
+            src={this.state.image}/>
+           </div>
+            <div className="Post flexCol">
+             <div className="UserInfo flexCol">
+               <div>{this.state.name}</div>
+               <div>{this.state.description}</div>
+             </div>
+              <div className="Post">
+                 <div>{this.state.post}</div>
+              </div>
+            </div>
         </div>
-      </div>
-      <p> <div className="Blog-text">{this.state.text}</div> </p>
-      <div className="Blog-details">
-        <ul className="menu simple">
-        <li> Author: <a href="#" onClick={this.tryClick}> {this.state.name}</a></li>
-        <li> Comments: <a href="#"> {this.state.comments}</a></li>
-        <li> Tags: <a href="#">  {this.state.tags} </a></li>
-        </ul>
-      </div>
     </div>
     );
   }
@@ -62,5 +53,17 @@ class Blog extends Component {
 //       </div>
 //     </div>
 // );
+
+
+// <h3 className="ptitle">{this.state.ptitle}<small>{this.state.date}</small></h3>
+//
+//    <div className="Blog-text">{this.state.text}</div>
+//    <div className="Blog-details">
+//      <ul className="menu simple">
+//        <li> Author: <a href="#" onClick={this.tryClick}> {this.state.name}</a></li>
+//        <li> Comments: <a href="#"> {this.state.comments}</a></li>
+//        <li> Tags: <a href="#">  {this.state.tags} </a></li>
+//       </ul>
+//   </div>
 
   export default Blog;

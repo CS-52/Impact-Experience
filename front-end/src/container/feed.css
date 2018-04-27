@@ -18,3 +18,11 @@
   width: 18vw;
   margin-right: 20px;
 }
+
+.feed{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow:scroll;
+    width: 90vw;
+}
