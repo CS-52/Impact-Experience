@@ -2,8 +2,9 @@
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-   overflow:scroll;
-   width: 90vw;
+    overflow:scroll;
+    height: 100%; /*what*/
+    width: 90vw;
 }
 
 .taskinput {

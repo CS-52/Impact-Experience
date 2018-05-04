@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import Contact from './component/contact.component.js';
 import Blog from './component/blog.component.js';
+import Committments from './component/committments.component.js';
 import NavigationBar from './component/navigation.component.js'
 
 import './App.css';
@@ -9,6 +10,7 @@ import './Assets/RivoliconsWebFont/style.css';
 import { Switch, Route} from 'react-router-dom';
 import Search from './container/search.container.js';
 import Feed from './container/feed.container.js';
+import Profile from './container/profile.container.js';
 
 class App extends Component {
   constructor(props){
@@ -25,6 +27,7 @@ class App extends Component {
           <Switch>
               <Route exact path='/' component={Feed}/>
               <Route path='/search' component={Search}/>
+              <Route path='/profile' component={Profile}/>
           </Switch>
       </div>
     );

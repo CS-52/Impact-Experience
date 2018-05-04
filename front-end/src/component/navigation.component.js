@@ -33,6 +33,11 @@ class NavigationBar extends Component {
                          <span className="ri ri-search iconpadding"></span>Search
                   </div>
               </Link>
+              <Link className="routingLink" to='/profile'>
+                  <div id="profileNav" onClick={this.selected} className="flexRow  justifyRow navFont navButtonFont selected">
+                      <span className="ri ri-chevron-right-circle iconpadding"></span>Profile
+                  </div>
+              </Link>
           </div>
    </div>
     );

@@ -23,20 +23,20 @@ class Search extends Component {
         this.setState({search: true});
       }
 
-
      showSearch(){
        if(!this.state.search){
          return []
        } else {
-         return [          <Contact key="1"image={'https://i.imgur.com/A0YeDly.jpg'} email={'haiwen@stanford.edu'} name={'J L'} />,
+         return [
+                   <Contact key="1" image={'https://i.imgur.com/A0YeDly.jpg'} email={'haiwen@stanford.edu'} name={'J L'} />,
                    <Contact key="2" image={'https://i.imgur.com/A0YeDly.jpg'} email={'hgui@stanford.edu'} name={'kkiu'} />,
                    <Contact key="3" image={'https://i.imgur.com/A0YeDly.jpg'} email={'g@stanford.edu'} name={'Mg'} />,
-                   <Contact key="4" image={'https://i.imgur.com/A0YeDly.jpg'} email={'g@stanford.edu'} name={'Hgu'} />,
-                   <Contact key="5" image={'https://i.imgur.com/A0YeDly.jpg'} email={'k@stanford.edu'} name={'Na'} />,
-                   <Contact key="6" image={'https://i.imgur.com/A0YeDly.jpg'} email={'ku@stanford.edu'} name={'Og'} />,
-                   <Contact key="7" image={'https://i.imgur.com/A0YeDly.jpg'} email={'ku@stanford.edu'} name={'Og'} />,
-                   <Contact key="8" image={'https://i.imgur.com/A0YeDly.jpg'} email={'haiwen@stanford.edu'} name={'J L'} />,
-                   <Contact key="9" image={'https://i.imgur.com/A0YeDly.jpg'} email={'hgui@stanford.edu'} name={'kkiu'} />];
+                   <Contact key="4" image={'https://i.imgur.com/A0YeDly.jpg'} email={'g@stanford.edu'} name={'Hgu'} />];
+                   // <Contact key="5" image={'https://i.imgur.com/A0YeDly.jpg'} email={'k@stanford.edu'} name={'Na'} />,
+                   // <Contact key="6" image={'https://i.imgur.com/A0YeDly.jpg'} email={'ku@stanford.edu'} name={'Og'} />,
+                   // <Contact key="7" image={'https://i.imgur.com/A0YeDly.jpg'} email={'ku@stanford.edu'} name={'Og'} />,
+                   // <Contact key="8" image={'https://i.imgur.com/A0YeDly.jpg'} email={'haiwen@stanford.edu'} name={'J L'} />,
+                   // <Contact key="9" image={'https://i.imgur.com/A0YeDly.jpg'} email={'hgui@stanford.edu'} name={'kkiu'} />];
        }
      }
 

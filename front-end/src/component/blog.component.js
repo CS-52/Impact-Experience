@@ -6,11 +6,10 @@ class Blog extends Component {
     super(props);
     this.state = {
       date: new Date().toLocaleDateString(),
-      name: "Haiwen",
-      description: "Exec@Impact",
-      email: props.email,
+      name: "Someone",
+      description: "someone@impact.com",
       image: "https://media.licdn.com/dms/image/C5103AQHS2GnhC9haBw/profile-displayphoto-shrink_800_800/0?e=1529906400&v=beta&t=FZPFq_L6xZSU_Z1Il9EG4mXmbgts17FPxBhJN1Gg97A",
-      post: "Example post Example post Example post Example post Example post Example post",
+      post: "Example Post EostExample Post Example Post Example Post Example Post Example Post Example Post",
       comments: '10',
       tags: '#impact-experience #coalminers #success #projectideas'
     };
@@ -24,13 +23,21 @@ class Blog extends Component {
             <img className="Avatar"
             src={this.state.image}/>
            </div>
-            <div className="Post flexCol">
+            <div className="Post_flexCol">
              <div className="UserInfo flexCol">
-               <div>{this.state.name}</div>
-               <div>{this.state.description}</div>
+               <div><strong>{this.state.name}</strong></div>
+               <div><em>{this.state.description}</em></div>
              </div>
               <div className="Post">
                  <div>{this.state.post}</div>
+              </div>
+              <span>
+                <input className="button" type="submit" value="Donate/Help" />
+                <input className="button" type="submit" value="Comment" />
+              </span>
+              <div className = "tags">
+                <a href = "#">{this.state.tags}</a> <br/>
+                {this.state.date}
               </div>
             </div>
         </div>

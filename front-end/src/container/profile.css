@@ -1,0 +1,28 @@
+.feedBar{
+ height: 8vh;
+ width: 90vw;
+ background-color: #FCF9F9;
+ box-shadow: 0.5px 5px 5px #e8e8e8;
+ z-index: 2;
+ justify-content: flex-end;
+}
+
+
+.addQbtn{
+  height: 3.7vh;
+  font-size: 15px;
+  background-color: #FF4747;
+  color: white;
+  font-family: Ledger;
+  box-sizing: border-box;
+  width: 18vw;
+  margin-right: 20px;
+}
+
+.feed{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow:scroll;
+    width: 90vw;
+}

@@ -15,13 +15,13 @@ class Feed extends Component {
        </div>
        <div className="feed">
                <Blog/>
-              <Blog/>
                <Blog/>
                <Blog/>
-              <Blog/>
                <Blog/>
                <Blog/>
-              <Blog/>
+               <Blog/>
+               <Blog/>
+               <Blog/>
                <Blog/>
        </div>
      </div>
