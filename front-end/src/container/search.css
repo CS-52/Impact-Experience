@@ -21,6 +21,7 @@
   font-size: 15px;
   background-color: #FF4747;
   color: white;
+  cursor: pointer;
   font-family: Ledger;
   box-sizing: border-box;
   width: 18vw;
@@ -30,6 +31,10 @@
 .searchbtn:focus {
   outline: none;
   /* background-color: #FF6F00 !important; */
+}
+
+.searchbtn:hover, a:hover {
+    opacity: 0.7;
 }
 
 .taskinput:focus {

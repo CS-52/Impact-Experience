@@ -1,19 +1,61 @@
+.Contact {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+.title {
+    color: grey;
+    font-size: 18px;
+}
+
+button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #FF4747;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
+
+button:hover, a:hover {
+    opacity: 0.7;
+}
+
 .contactImage {
    height: 150px;
    width: 150px
 }
 
-.Contact {
+/* .Contact {
   height: 200px;
   margin: 15px;
-  border: 1px black;
   box-shadow: 1000px 1px #7f8288;
-}
+} */
 
 .contactText {
   font-size: 13px;
   flex-grow: 1;
 }
+
+.contactInfo {
+  padding-top: 5px;
+  font-size: 13px;
+  flex-grow: 1;
+  color: grey;
+}
+
 
 .FlexRow {
   display: flex;
