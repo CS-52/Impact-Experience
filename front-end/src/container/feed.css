@@ -1,21 +1,49 @@
+.updatePost{
+ width: 80%;
+}
+
+.postTextArea{
+  width: 100%;
+  flex-grow: 1;
+  font-size: 14px;
+  font-family: Ledger;
+  margin-left: 10px;
+  border: none;
+  border-radius: 2%;
+  font-weight: 100;
+}
+.update_Avatar {
+   height: 25px;
+   width: 25px;
+   border-radius: 0.5;
+   border-radius: 50%;
+}
+
 .feedBar{
- height: 8vh;
- width: 90vw;
- background-color: #FCF9F9;
- box-shadow: 0.5px 5px 5px #e8e8e8;
+ height: 40px;
+ width: 100%;
+ background-color: #E4E4E4;
  z-index: 2;
  justify-content: flex-end;
 }
 
+.updateBar{
+ height: 60px;
+ width: 100%;
+ background-color: #C4C4C4;
+ z-index: 2;
+ justify-content: center;
+}
 
 .addQbtn{
-  height: 3.7vh;
-  font-size: 15px;
+  height: 100%;
+  font-size: 13px;
   background-color: #FF4747;
   color: white;
   font-family: Ledger;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  width: 18vw;
+  width: 15%;
   margin-right: 20px;
 }
 
@@ -25,4 +53,10 @@
     flex-wrap: wrap;
     overflow:scroll;
     width: 90vw;
+    background-color: #f3f3f3;
+}
+
+.selectFeed{
+  width: 25%;
+  margin-right: 30px;
 }
