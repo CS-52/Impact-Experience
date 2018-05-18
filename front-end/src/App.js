@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import Contact from './component/contact.component.js';
-import Committments from './component/committments.component.js';
 import NavigationBar from './component/navigation.component.js'
 
 import './App.css';

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Contact from '../component/contact.component.js';
-import './search.css';
+import './container_css/search.css';
 
 class Search extends Component {
     constructor(prop){

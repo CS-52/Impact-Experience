@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './committments.css';
+import './component_css/committments.css';
 
 class Committments extends Component {
   constructor(props){

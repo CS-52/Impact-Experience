@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Committments from '../component/committments.component.js'
-import './profile.css';
+import './container_css/profile.css';
 
 class Profile extends Component {
   constructor(prop){

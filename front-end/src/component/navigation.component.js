@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
-import './navigation.css';
+import './component_css/navigation.css';
 
 class NavigationBar extends Component {
   constructor(prop){
