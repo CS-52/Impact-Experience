@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './component.css';
-import IoIconPack from 'react-icons/lib/io'
 class Contact extends Component {
   constructor(prop){
       super(prop)
@@ -22,7 +21,6 @@ class Contact extends Component {
          <div className="contactInfo flexRow justifyRow">
           {this.state.email}
         </div>
-        <a href="#"><i class="social-facebook"></i></a>
         <p><button>Contact</button></p>
    </div>
     );

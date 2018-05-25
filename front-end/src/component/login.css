@@ -1,0 +1,27 @@
+.section{
+  display: flex;
+}
+
+.column{
+  float: left;
+  padding: 10px;
+}
+
+.leftimage{
+  width : 50vw;
+}
+
+.left{
+  width: 75%
+}
+
+.right{
+  display: flex;
+  flex-direction: column;
+  margin-left: 50vw;
+  padding-left: 5%;
+}
+
+.heading{
+  width: 25vw;
+}

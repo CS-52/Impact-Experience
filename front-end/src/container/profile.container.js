@@ -10,12 +10,8 @@ class Profile extends Component {
   render() {
     return (
       <div className= "flexCol">
-       <div className="feedBar flexRow justifyRow">
-        <input className="addQbtn" type="submit" value="Add Question" />
-       </div>
        <div className="profile">
           <Committments/>
-
        </div>
      </div>
     );

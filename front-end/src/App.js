@@ -10,6 +10,7 @@ import { Switch, Route} from 'react-router-dom';
 import Search from './container/search.container.js';
 import Feed from './container/feed.container.js';
 import Profile from './container/profile.container.js';
+import LoginPage from './container/login.container.js';
 
 class App extends Component {
   constructor(props){
@@ -27,6 +28,7 @@ class App extends Component {
               <Route exact path='/' component={Feed}/>
               <Route path='/search' component={Search}/>
               <Route path='/profile' component={Profile}/>
+              <Route path='/login' component={LoginPage}/>
           </Switch>
       </div>
     );
