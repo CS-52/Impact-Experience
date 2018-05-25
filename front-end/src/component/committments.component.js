@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './committments.css';
+import './component_css/committments.css';
 import CommittmentItem from "./committmentItem.js";
 
 class Committments extends Component {
