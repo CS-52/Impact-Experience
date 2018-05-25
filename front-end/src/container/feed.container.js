@@ -20,6 +20,7 @@ class Feed extends Component {
                          cohort: "virgina17"
                      },
         }
+      console.log('Hi')
     }
 
     selectFeedCohort(newValue){
@@ -73,7 +74,7 @@ class Feed extends Component {
                     />
                 </div>
                 <div className="updateBar flexRow justifyRow">
-                    <div>
+                    <div className="avatar_div">
                         <img className="update_Avatar"
                              src={this.state.user_image}/>
                     </div>
