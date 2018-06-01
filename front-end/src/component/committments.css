@@ -87,7 +87,6 @@ Input {
 
 /* Style the "Add" button */
 .addBtn {
-    border: none;
     padding: 10px;
     width: 25%;
     background: #d9d9d9;
@@ -106,12 +105,10 @@ Input {
 
 /* Style the close button */
 .closeButton {
-    border: none;
     position: absolute;
     right: 0;
     top: 0;
-    transition: 0.3s;
-    padding: 16px 16px 16px 16px;
+    padding: 12px 16px 12px 16px;
 }
 
 .closeButton:hover {
@@ -119,7 +116,8 @@ Input {
     color: white;
 }
 
-.commitments_contrler{
-  height: 100%;
-  display: flex;
+
+.committment_form{
+  width: 400px;
+  font-size: 12px;
 }

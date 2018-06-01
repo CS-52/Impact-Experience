@@ -22,6 +22,10 @@
   align-items: center;
 }
 
+.flexEnd{
+  justify-content: flex-end;
+}
+
 
 .hidden {
   display: none;

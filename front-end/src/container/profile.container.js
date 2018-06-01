@@ -11,7 +11,7 @@ class Profile extends Component {
     return (
       <div className= "flexCol">
        <div className="profile">
-          <Committments/>
+          <Committments />
        </div>
      </div>
     );
