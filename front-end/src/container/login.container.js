@@ -25,7 +25,7 @@ class LoginPage extends Component {
            cohortChoices: this.cohortChoices,
            cohortChoice: "",
            login: true,
-           user_dp: 'https://i.imgur.com/YSpyEst.png',
+           user_dp: "https://i.imgur.com/n7NqNRA.png",
         };
 
         this.handleUser = this.handleUser.bind(this);
@@ -117,7 +117,6 @@ class LoginPage extends Component {
 
 
     render() {
-        console.log(this.state.login);
         return (
            <div className= "flexRow height">
             <div className="loginBanner"><img className="bannerimg" src={backdrop}/></div>

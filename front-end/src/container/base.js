@@ -43,7 +43,7 @@ class Base extends Component {
         if(this.state.buttons[this.state.selected] === 'feed'){
             return <Feed userObj={this.props.userObj}/>;
         } else if (this.state.buttons[this.state.selected] === 'search'){
-            return <Search/>
+            return <Search cohort={this.props.userObj.cohort}/>
         } else {
             return <Profile/>;
         }

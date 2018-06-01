@@ -11,7 +11,7 @@ class Post extends Component {
     constructor(props){
         super(props);
         this.state = {
-            date: moment(this.props.date, ).format("MM-DD-YYYY"),
+            date: moment(this.props.post.date, ).format("MM-DD-YYYY"),
             name: "",
             description: "someone@impact.com",
             image: {defaultImage},
@@ -34,12 +34,14 @@ class Post extends Component {
     }
 
     async getUser(){
-        await this.postUserRef.child(firebase.auth().currentUser.uid).ref.on("value", snapshot =>  {
+        console.log(this.props);
+        await this.postUserRef.child(this.props.post.uuid).ref.on("value", snapshot =>  {
             if(snapshot.val()){
                 let returnedData = snapshot.val();
+                console.log(returnedData);
                 this.setState({name: returnedData.name, image: returnedData.dp, description: returnedData.email})
             } else {
-
+                console.log(snapshot.val());
             }
         });
     }

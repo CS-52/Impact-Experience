@@ -11,8 +11,6 @@ import * as firebase from 'firebase';
 class Feed extends Component {
     constructor(props){
         super(props)
-        console.log(props);
-        console.log("Props");
         this.state = {
             feed_cohort: this.props.userObj.cohort,
             all_cohorts: [
@@ -49,13 +47,14 @@ class Feed extends Component {
     }
 
 
-    getCohortID(cohortvalue){
-        for (let i in this.state.all_cohorts){
-            console.log(this.state.all_cohorts[i].value);
-            if (this.state.all_cohorts[i].value === cohortvalue){
+    getCohortID(cohortvalue, all_cohorts){
+        console.log(cohortvalue);
+        for (let i in all_cohorts){
+            console.log(all_cohorts[i].value);
+            if (all_cohorts[i].value === cohortvalue){
                 return i;
             }
-            console.log('Mer');
+            console.log('Cohort ID left');
         }
     }
 
@@ -80,9 +79,10 @@ class Feed extends Component {
 
 
 
-    async getPosts(){
-        console.log(this.state.feed_cohort)
-        let cohortID = this.getCohortID(this.state.feed_cohort);
+    async getPosts(cohortValue, all_cohorts){
+        console.log(cohortValue);
+        let cohortID = this.getCohortID(cohortValue, all_cohorts);
+        console.log(cohortID);
         await this.postRef.child(cohortID).ref.on("value", snapshot =>  {
             if(snapshot.val()){
                 let postData = [];
@@ -107,9 +107,11 @@ class Feed extends Component {
                 for (let key in returnedData) {
                     cohorts.push(returnedData[key]);
                 }
-                //
-                this.setState({all_cohorts: this.arrayToReactSelectOptions(cohorts)});
-                this.timeForPosts = true;
+                let newCohorts = this.arrayToReactSelectOptions(cohorts);
+                this.setState({all_cohorts: newCohorts});
+                console.log(newCohorts);
+                this.getPosts(this.state.feed_cohort, newCohorts);
+                // this.timeForPosts = true;
             } else {
             }
         });
@@ -119,10 +121,7 @@ class Feed extends Component {
         postObject.date = moment().format("MM-DD-YYYY");
         postObject.uuid = firebase.auth().currentUser.uid;
 
-        console.log(postObject.cohort);
-        let cohortID = this.getCohortID(postObject.cohort);
-        console.log(postObject);
-        console.log(cohortID);
+        let cohortID = this.getCohortID(postObject.cohort, this.state.all_cohorts);
         let updates = {};
         const newPostKey = firebase.database().ref('posts').child(cohortID).push().key;
         updates['/posts/' + cohortID  +'/' + newPostKey] = postObject;
@@ -136,7 +135,11 @@ class Feed extends Component {
 
     selectFeedCohort(newValue){
         this.setState({feed_cohort: newValue.value})
-        this.getNewPosts = true;
+        this.postRef.off();
+        this.postRef = null;
+        this.postRef = firebase.database().ref('posts');
+        // this.getNewPosts = true;
+        this.getPosts(newValue.value, this.state.all_cohorts);
         //Send backend request
         //Start spinner till then
     }
@@ -175,7 +178,6 @@ class Feed extends Component {
 
     submitPost() {
         document.getElementById("edit_post_bar").classList.add("visibilityOff");
-        console.log(this.state.new_post);
         this.createPost(this.state.new_post);
         let new_post = Object.assign({}, this.state.new_post);
         new_post.content = ""
@@ -187,27 +189,12 @@ class Feed extends Component {
     renderPosts(){
         let postList = []
         for (let i in this.state.postList){
-            console.log(this.state.postList[i].postId);
             postList.push(<Post key={this.state.postList[i].postId} post={this.state.postList[i]}/>)
         }
         return postList;
     }
 
     render() {
-        console.log(this.state.postList);
-        if(this.timeForPosts){
-            this.timeForPosts = false;
-            this.getPosts();
-        }
-        if(this.getNewPosts){
-            this.getNewPosts = false;
-            this.cohortRef.off()
-            this.cohortRef = null;
-            this.cohortRef = firebase.database().ref('cohort');
-            this.getPosts();
-        }
-
-
         return (
             <div className= "flexCol">
                 <div className="feedBar flexRow justifyRow">
