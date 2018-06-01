@@ -32,8 +32,8 @@ class Blog extends Component {
                  <div>{this.state.post}</div>
               </div>
               <span>
-                <input className="button" type="submit" value="Donate/Help" />
-                <input className="button" type="submit" value="Comment" />
+                <input className="donateButton" type="submit" value="Donate/Help" />
+                <input className="commentButton" type="submit" value="Comment" />
               </span>
               <div className = "tags">
                 <a href = "#">{this.state.tags}</a> <br/>

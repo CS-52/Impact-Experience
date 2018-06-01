@@ -35,7 +35,7 @@ class Post extends Component {
                             <div>{this.state.post}</div>
                         </div>
                         <div className="donationBar">
-                            <span className="button">Donate/Help</span>
+                            <span className="donateButton">Donate/Help</span>
                         </div>
                     </div>
                 </div>

@@ -22,7 +22,7 @@ class Contact extends Component {
          <div className="contactInfo flexRow justifyRow">
           {this.state.email}
         </div>
-        <p><button>Contact</button></p>
+        <p><button className = "contactButton">Contact</button></p>
    </div>
     );
   }
