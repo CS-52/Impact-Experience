@@ -1,8 +1,10 @@
 .Contact {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-    margin: auto;
-    text-align: center;
+    max-height: 200px;
+    margin: 28px;
+    border: 1px black;
+    box-shadow: 1px 1px #7f8288;
+    background-color: white;
+    padding: 0px 20px;
 }
 
 .title {
@@ -16,7 +18,7 @@ button {
     display: inline-block;
     padding: 8px;
     color: white;
-    background-color: #FF4747;
+    background-color: #5492ef;
     text-align: center;
     cursor: pointer;
     width: 100%;
@@ -34,8 +36,9 @@ button:hover, a:hover {
 }
 
 .contactImage {
-   height: 150px;
-   width: 150px
+    height: 100px;
+    width: 100px;
+    padding: 10px 10px;
 }
 
 /* .Contact {

@@ -151,10 +151,29 @@ class App extends Component {
             this.trackUserPresence()
             this.getUserObject();
         }.bind(this), function(error) {
-            console.log("Failed")
+            console.log("Failed To Sign in")
             callback(error.message)
         }.bind(this));
     }
+
+    arrayToReactSelectOptions(cohortsArray){
+        let options = [];
+        for (let i in cohortsArray){
+            let option = {value: cohortsArray[i], label: cohortsArray[i]}
+            options.push(option);
+        }
+        return options
+    }
+
+    getCohortID(cohortvalue, all_cohorts){
+        for (let i in all_cohorts){
+            console.log(all_cohorts[i].value);
+            if (all_cohorts[i].value === cohortvalue){
+                return i;
+            }
+        }
+    }
+
 
     /*Create User*/
     createUser(userObject){
@@ -169,38 +188,35 @@ class App extends Component {
         }.bind(this)).catch((err) => {
             console.log('Data could not be saved. ' + err);
         });
+
+        let updateContacts = {};
+        let cohortObjectForm = this.arrayToReactSelectOptions(this.state.cohorts);
+        let cohortID = this.getCohortID(userObject.cohort,cohortObjectForm);
+        console.log(cohortObjectForm);
+        console.log(cohortID);
+        const newPostKey = firebase.database().ref('contacts').child(cohortID).push().key;
+        updateContacts['/contacts/' + cohortID + '/' + newPostKey ] = userObject;
+
+        firebase.database().ref().update(updateContacts).then(function(){
+            console.log('Contacts added to  Firebase!');
+        }.bind(this)).catch((err) => {
+            console.log('Data could not be saved. ' + err);
+        });
+
     }
 
 
-    // loggedIn(){
-    //   return(
-    //     <div className="flexRow fullpage">
-    //       <NavigationBar image={this.state.user_dp} firstname={this.state.firstname}/>
-    //         <Switch>
-    //             <Route exact path='/loggedIn/' component={Feed}/>
-    //             <Route path='/loggedIn/search' component={Search}/>
-    //             <Route path='/loggedIn/profile' component={Profile}/>
-    //         </Switch>
-    //     </div>
-    //  );
-    // }
+
 
     loggedIn(){
         return(
                 <Switch>
                     <Route exact path='/loggedIn/' component={(props) => <Base userObj={this.userObj}/>}/>
-                    <Route path='/loggedIn/search' component={Search}/>
-                    <Route path='/loggedIn/profile' component={Profile}/>
                 </Switch>
         );
     }
 
-
-
-//<NavigationBar image={this.state.user_dp} firstname={this.state.firstname}/>
     render() {
-        console.log('why');
-        console.log(this.redirectLoggedIn);
         if (this.redirectLoggedIn === true) {
             this.redirectLoggedIn = false
             return(<Redirect to='/loggedIn' />);

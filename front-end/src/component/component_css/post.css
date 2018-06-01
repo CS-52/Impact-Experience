@@ -46,12 +46,6 @@
   font-size: 18px;
 }
 
-.Contact {
-  height: 75px;
-  margin: 7px;
-  border: 1px black;
-  box-shadow: 1px 1px #7f8288;
-}
 
 .Post {
   padding-bottom: 30px;
@@ -68,7 +62,7 @@
 .button{
   padding: 5px;
   font-size: 15px;
-  background-color: #FF4747;
+  background-color: #5492ef;
   color: white;
   font-family: Ledger;
   margin-right: 20px;
