@@ -1,0 +1,20 @@
+#navigation-container{
+    height: 50px;
+    width: 120px;
+    background-color: #ced7db;
+    align-content: center;
+    margin: 0px 12px;
+}
+
+.text-container-base {
+    height: 45px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 0px 12px;
+}
+
+.selected_bar{
+    background-color: #449fdb !important;
+}

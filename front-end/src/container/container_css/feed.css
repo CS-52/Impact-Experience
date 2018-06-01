@@ -1,5 +1,5 @@
 #edit_post_bar{
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 .updatePost{
@@ -24,7 +24,11 @@
 
 .donationArea{
     font-size: 12px;
-    height: 18px;
+    height: 34px;
+    border: none;
+    margin: 3px 0px;
+    padding: 10px 6px;
+    border-radius: 4.5%;
 }
 
 .update_Avatar {
@@ -66,9 +70,11 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    overflow:scroll;
-    width: 90vw;
     background-color: #f3f3f3;
+
+    overflow-y: scroll;
+    max-height: 400px;
+
 }
 
 .selectFeed{
@@ -81,4 +87,17 @@
     width: 25%;
     font-size: 12px;
     padding: 3px;
+}
+
+
+.height-controller{
+    max-height: 600px;
+    overflow-y: scroll;
+}
+
+.submitBut{
+    padding: 7px 6px;
+    background-color: red;
+    color: white;
+    border-radius: 5.5%;
 }

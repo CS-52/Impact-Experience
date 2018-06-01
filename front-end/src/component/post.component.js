@@ -1,19 +1,48 @@
 import React, { Component } from 'react';
 import './component_css/post.css';
+import * as firebase from 'firebase';
+import * as moment from 'moment';
+
+
+import defaultImage from '../Assets/images/new_user.png'
+
 
 class Post extends Component {
     constructor(props){
         super(props);
         this.state = {
-            date: new Date().toLocaleDateString(),
-            name: "Tom Silvers",
+            date: moment(this.props.date, ).format("MM-DD-YYYY"),
+            name: "",
             description: "someone@impact.com",
-            image: "https://media.licdn.com/dms/image/C5103AQHS2GnhC9haBw/profile-displayphoto-shrink_800_800/0?e=1529906400&v=beta&t=FZPFq_L6xZSU_Z1Il9EG4mXmbgts17FPxBhJN1Gg97A",
-            post: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            comments: '10',
+            image: {defaultImage},
+            post: this.props.post.content,
         };
+        this.getUser = this.getUser.bind(this);
     }
 
+    componentDidMount(){
+        //Refs
+        this.postUserRef = firebase.database().ref('users');
+        this.getUser();
+    }
+
+
+    componentWillUnmount(){
+        //Refs
+        this.postUserRef.off()
+        this.postUserRef = null;
+    }
+
+    async getUser(){
+        await this.postUserRef.child(firebase.auth().currentUser.uid).ref.on("value", snapshot =>  {
+            if(snapshot.val()){
+                let returnedData = snapshot.val();
+                this.setState({name: returnedData.name, image: returnedData.dp, description: returnedData.email})
+            } else {
+
+            }
+        });
+    }
     render() {
         return (
             <div className="Main_post">

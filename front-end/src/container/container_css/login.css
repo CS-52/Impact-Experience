@@ -1,0 +1,52 @@
+.logologin{
+    height: 60px;
+    margin-bottom: 30px;
+}
+
+.bannerimg {
+    /*width: 100%;*/
+    width: 70vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.height {
+    height: 100vh;
+}
+
+.small-ud{
+    font-size: 11px;
+    font-family: Damascus;
+}
+
+.react-select-contrler{
+    height: 50px;
+}
+
+.select-cont{
+   width: 20vw;
+}
+
+
+.flex-end{
+    width: 20vw;
+    justify-content: flex-end;
+}
+
+.flx-end {
+    width: auto !important;
+}
+
+#errorMessage{
+    width: 20vw;
+    color: red;
+}
+
+.login{
+    background-color: white;
+    width:40vw;
+}
+
+.loginWidth {
+    width: 20vw;
+}

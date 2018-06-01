@@ -1,0 +1,35 @@
+#base-container {
+    height: 100vh;
+    width: 100vw;
+}
+
+
+#Navigation-Bar{
+    height: 50px;
+    justify-content: space-between;
+    padding: 0px 40px;
+    box-shadow: 0.5px 0px 0.5px #C4C4C4;
+}
+
+
+.logonav{
+    height: 30px;
+    width: 50px;
+}
+
+
+
+#bottom-base-container{
+    height: calc(100% - 50px);
+}
+
+#user-summary{
+    width: 35%;
+    height: 100%;
+}
+
+.element_container{
+    height: 80vh;
+    width: 65%;
+    padding: 20px 20px;
+}

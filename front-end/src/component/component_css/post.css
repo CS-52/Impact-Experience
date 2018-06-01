@@ -11,7 +11,7 @@
 
 .fullname{
    color: #14171a;
-   font-size: 14px;
+   font-size: 13px;
    font-weight: bold;
    font-family: sans-serif;
 }
@@ -31,6 +31,7 @@
  margin-bottom: 2px;
  font-family: Ledger;
  width: 95%;
+ font-size: 12px;
 }
 .avatarMargin{
   padding-top: 25px;

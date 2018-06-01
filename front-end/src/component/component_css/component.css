@@ -56,8 +56,3 @@ button:hover, a:hover {
   color: grey;
 }
 
-
-.FlexRow {
-  display: flex;
-  flex-direction: row;
-}
