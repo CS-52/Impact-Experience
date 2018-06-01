@@ -62,11 +62,11 @@ class Post extends Component {
                                 <a className="titlePost" href="mailto">{this.state.description}</a>
                             </div>
                         </div>
-                        <div className="Post">
+                        <div className="Post postFont">
                             <div>{this.state.post}</div>
                         </div>
                         <div className="donationBar">
-                            <span className="button">Donate/Help</span>
+                            <span className="button postFont">Donate/Help</span>
                         </div>
                     </div>
                 </div>

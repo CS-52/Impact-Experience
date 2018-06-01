@@ -124,7 +124,7 @@ class Search extends Component {
             <div className= "flexCol height_cont">
                 <div className="search flexRow justifyRow">
                     <Select
-                        className="selectFeed"
+                        className="selectFeed postFont greyFont"
                         name="form-field-name"
                         value={this.state.feed_cohort}
                         onChange={this.selectFeedCohort.bind(this)}

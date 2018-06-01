@@ -21,6 +21,7 @@
 
 #bottom-base-container{
     height: calc(100% - 50px);
+    background-color: #f2f1ee;
 }
 
 #user-summary{

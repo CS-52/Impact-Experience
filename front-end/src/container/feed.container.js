@@ -199,7 +199,7 @@ class Feed extends Component {
             <div className= "flexCol">
                 <div className="feedBar flexRow justifyRow">
                     <Select
-                        className="selectFeed"
+                        className="selectFeed postFont greyFont"
                         name="form-field-name"
                         value={this.state.feed_cohort}
                         onChange={this.selectFeedCohort.bind(this)}
@@ -213,17 +213,17 @@ class Feed extends Component {
                                  src={this.state.user_image}/>
                         </div>
                         <div className="updatePost">
-                            <textarea className="postTextArea" placeholder={"Any Updates? Start a Conversation."} value={this.state.new_post.content} onChange={this.newPostContentUpdate.bind(this)}  onClick={this.postReady} />
+                            <textarea className="postFont postTextArea " placeholder={"Any Updates? Start a Conversation."} value={this.state.new_post.content} onChange={this.newPostContentUpdate.bind(this)}  onClick={this.postReady} />
                             <div id="edit_post_bar"className="visibilityOff  flexRow ">
-                                <textarea className="donationArea" placeholder={"Add a donation link"} onChange={this.newPostLinkUpdate.bind(this)}  />
+                                <textarea className="postFont donationArea " placeholder={"Add a donation link"} onChange={this.newPostLinkUpdate.bind(this)}  />
                                 <Select
-                                    className="postSelection"
+                                    className="postSelection postFont"
                                     name="make-post-name"
                                     value={this.state.new_post.cohort}
                                     onChange={this.newPostCohort.bind(this)}
                                     options={this.state.all_cohorts}
                                 />
-                                <div onClick={this.submitPost} className=" flexRow justifyRow"><div className="submitBut">Post</div></div>
+                                <div onClick={this.submitPost} className=" flexRow justifyRow"><div className="submitBut postFont">Post</div></div>
                             </div>
                         </div>
                     </div>

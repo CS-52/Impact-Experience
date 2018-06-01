@@ -4,7 +4,7 @@
     flex-wrap: wrap;
     overflow:scroll;
     height: 100%; /*what*/
-    background-color: #eaeaea;
+    background-color: #f7f7f7;
 }
 
 .taskinput {
@@ -43,11 +43,12 @@
 }
 
 .search{
-    height: 8vh;
-    background-color: #f7f7f7;
+    height: 40px;
+    background-color: #ffffffa6;
     -webkit-box-shadow: 0.5px 5px 5px #e8e8e8;
-    box-shadow: 0.5px 5px 5px #e8e8e8;
+    box-shadow: 0.5px 1px 1px #e8e8e8;
     z-index: 2;
+    -ms-flex-pack: end;
     justify-content: flex-end;
 }
 

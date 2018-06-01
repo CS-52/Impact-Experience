@@ -61,10 +61,9 @@
 
 .button{
   padding: 5px;
-  font-size: 15px;
-  background-color: #5492ef;
+  font-size: 13px;
+  background-color: #3b93a5;
   color: white;
-  font-family: Ledger;
   margin-right: 20px;
 
 }
@@ -72,3 +71,4 @@
 .donationBar{
   margin-bottom: 20px;
 }
+
