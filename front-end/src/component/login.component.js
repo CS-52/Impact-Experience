@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './login.css';
+import './component_css/login.css';
 import IECover from '../Assets/images/IE-Cover.png';
 
 class Login extends Component {
