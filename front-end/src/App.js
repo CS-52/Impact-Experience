@@ -45,10 +45,9 @@ class App extends Component {
     componentDidMount(){
         //Refs
         this.cohortRef = firebase.database().ref('cohort');
-
-
         this.getCohorts();
     }
+    
     componentWillUnmount(){
         //Refs
         this.cohortRef.off()

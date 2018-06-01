@@ -33,11 +33,11 @@ class CommittmentItem extends Component {
 
   check(item) {
     //item.setAttribute("className", "checked");
-    this.props.check(item.key);
+    this.props.check(item);
   }
 
-  remove(key) {
-    this.props.remove(key);
+  remove(item) {
+    this.props.remove(item);
   }
 
   render() {

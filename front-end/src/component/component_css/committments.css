@@ -118,3 +118,8 @@ Input {
     background-color: #f44336;
     color: white;
 }
+
+.commitments_contrler{
+  height: 100%;
+  display: flex;
+}

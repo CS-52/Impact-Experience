@@ -45,7 +45,7 @@ class Base extends Component {
         } else if (this.state.buttons[this.state.selected] === 'search'){
             return <Search/>
         } else {
-            return <Feed userObj={this.props.userObj}/>;
+            return <Profile/>;
         }
     }
 
