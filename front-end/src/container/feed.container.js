@@ -6,7 +6,7 @@ import './container_css/feed.css';
 
 import * as moment from 'moment';
 
-import * as firebase from 'firebase';
+import {database, auth} from 'firebase';
 
 class Feed extends Component {
     constructor(props){
@@ -48,21 +48,18 @@ class Feed extends Component {
 
 
     getCohortID(cohortvalue, all_cohorts){
-        console.log(cohortvalue);
         for (let i in all_cohorts){
-            console.log(all_cohorts[i].value);
             if (all_cohorts[i].value === cohortvalue){
                 return i;
             }
-            console.log('Cohort ID left');
         }
     }
 
 
     componentDidMount(){
         //Refs
-        this.cohortRef = firebase.database().ref('cohort');
-        this.postRef = firebase.database().ref('posts');
+        this.cohortRef = database().ref('cohort');
+        this.postRef = database().ref('posts');
 
         this.getCohorts();
     }
@@ -80,9 +77,7 @@ class Feed extends Component {
 
 
     async getPosts(cohortValue, all_cohorts){
-        console.log(cohortValue);
         let cohortID = this.getCohortID(cohortValue, all_cohorts);
-        console.log(cohortID);
         await this.postRef.child(cohortID).ref.on("value", snapshot =>  {
             if(snapshot.val()){
                 let postData = [];
@@ -109,7 +104,6 @@ class Feed extends Component {
                 }
                 let newCohorts = this.arrayToReactSelectOptions(cohorts);
                 this.setState({all_cohorts: newCohorts});
-                console.log(newCohorts);
                 this.getPosts(this.state.feed_cohort, newCohorts);
                 // this.timeForPosts = true;
             } else {
@@ -119,14 +113,14 @@ class Feed extends Component {
 
     createPost(postObject){
         postObject.date = moment().format("MM-DD-YYYY");
-        postObject.uuid = firebase.auth().currentUser.uid;
+        postObject.uuid = auth().currentUser.uid;
 
         let cohortID = this.getCohortID(postObject.cohort, this.state.all_cohorts);
         let updates = {};
-        const newPostKey = firebase.database().ref('posts').child(cohortID).push().key;
+        const newPostKey = database().ref('posts').child(cohortID).push().key;
         updates['/posts/' + cohortID  +'/' + newPostKey] = postObject;
 
-        firebase.database().ref().update(updates).then(function(){
+        database().ref().update(updates).then(function(){
             console.log('Post added to  Firebase!');
         }.bind(this)).catch((err) => {
             console.log('Data could not be saved. ' + err);
@@ -137,7 +131,7 @@ class Feed extends Component {
         this.setState({feed_cohort: newValue.value})
         this.postRef.off();
         this.postRef = null;
-        this.postRef = firebase.database().ref('posts');
+        this.postRef = database().ref('posts');
         // this.getNewPosts = true;
         this.getPosts(newValue.value, this.state.all_cohorts);
         //Send backend request

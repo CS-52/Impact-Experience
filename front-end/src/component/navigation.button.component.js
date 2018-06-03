@@ -15,8 +15,6 @@ class NavigationButton extends Component {
         this.select = this.select.bind(this);
     }
     componentWillReceiveProps(props){
-        console.log('Hello from recieve props');
-        console.log(props);
         if(props.selected === true && this.state.selected === false){
             //toggle
             this.setState({selected: props.selected});

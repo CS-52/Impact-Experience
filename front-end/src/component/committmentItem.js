@@ -19,15 +19,14 @@ class CommittmentItem extends Component {
  }
 
   createTasks(item) {
-    return <li  onClick={() => this.check(item)}
+    return <li className="postFont smallFont" onClick={() => this.check(item)}
               key={item.key}> {item.text}
-              <span onClick={this.closeButton}> <button className="closeButton"> X </button> </span>
+              <span onClick={this.closeButton}> <button data-id={item.commitmentID} className="closeButton"> X </button> </span>
            </li>
   }
 
   closeButton(e){
-    console.log("closebutton");
-    this.remove(this.props.entries.key);
+    this.props.remove(e.target.dataset.id)
     e.stopPropagation();
   }
 
@@ -37,6 +36,8 @@ class CommittmentItem extends Component {
   }
 
   remove(item) {
+    console.log('In ittem');
+    console.log(item);
     this.props.remove(item);
   }
 

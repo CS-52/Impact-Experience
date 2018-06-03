@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import * as firebase from 'firebase';
-
 import NavigationButton  from '../component/navigation.button.component'
 import logo from '../Assets/images/imp-log.png'
 
@@ -9,7 +7,7 @@ import { Switch, Route, withRouter, Redirect} from 'react-router-dom';
 import Search from '../container/search.container.js';
 import Feed from '../container/feed.container.js';
 import Profile from '../container/profile.container.js';
-
+import ProfileCard from '../component/profilecard.component.js';
 
 
 class Base extends Component {
@@ -60,7 +58,9 @@ class Base extends Component {
                   </div>
               </div>
               <div id="bottom-base-container" className="flexRow">
-                  <div id="user-summary"></div>
+                  <div id="user-summary">
+                     <ProfileCard user={this.props.userObj}/>
+                  </div>
                   <div className="element_container">
                       {this.renderView()}
                   </div>

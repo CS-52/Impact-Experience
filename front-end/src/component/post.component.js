@@ -66,7 +66,7 @@ class Post extends Component {
                             <div>{this.state.post}</div>
                         </div>
                         <div className="donationBar">
-                            <span className="button postFont">Donate/Help</span>
+                            <span className="donateButton postFont">Donate/Help</span>
                         </div>
                     </div>
                 </div>
